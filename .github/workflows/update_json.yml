@@ -1,0 +1,42 @@
+name: Automated JSON Channel Updater
+
+on:
+  schedule:
+    - cron: '*/7 * * * *' 
+  workflow_dispatch:
+
+jobs:
+  update-file:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Download the latest JSON
+        run: |
+          curl -sS -o full_channels.json "https://raw.githubusercontent.com/fakeall12398-sketch/JIO_TV/refs/heads/main/full_channels.json"
+
+      - name: Set up Git
+        run: |
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git config --global user.name "github-actions[bot]"
+
+      - name: Check for changes
+        id: git_status
+        run: |
+          if git diff --exit-code full_channels.json; then
+            echo "::set-output name=has_changes::false"
+          else
+            echo "::set-output name=has_changes::true"
+          fi
+
+      - name: Commit and Push changes
+        if: steps.git_status.outputs.has_changes == 'true'
+        run: |
+          git add full_channels.json
+          git commit -m "Automated: Update full_channels.json (Action runs every 7 mins)"
+          git push
+          
