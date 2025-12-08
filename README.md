@@ -11,7 +11,7 @@ The primary JSON file used in this repository is automatically synchronized ever
 
 ## 🙏 Acknowledgement & Support
 
-All credit for the data collection, maintenance, and regular updates goes to the owner of the original source repository, **fakeall12398-sketch**.
+All credit for the data collection, maintenance, and regular updates goes to the owner of the original source repository,
 
 ---
 
