@@ -1,4 +1,4 @@
-name: Automated JSON Channel Updater
+name: Automated Fancode JSON Updater
 
 on:
   schedule:
@@ -15,29 +15,29 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Download the latest JSON
+      - name: Download JSON
         run: |
-          curl -sS -o full_channels.json "https://raw.githubusercontent.com/fakeall12398-sketch/JIO_TV/refs/heads/main/full_channels.json"
+          curl -sS -o fancode.json "https://raw.githubusercontent.com/fakeall12398-sketch/JIO_TV/refs/heads/main/full_channels.json"
 
-      - name: Set up Git
+      - name: Configure Git User
         run: |
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git config --global user.name "github-actions[bot]"
 
-      - name: Check for changes
+      - name: Check for Changes
         id: git_status
         run: |
-          if git diff --exit-code full_channels.json; then
+          if [ -z "$(git status --porcelain)" ]; then
             echo "has_changes=false" >> $GITHUB_OUTPUT
           else
             echo "has_changes=true" >> $GITHUB_OUTPUT
           fi
         shell: bash
 
-      - name: Commit and Push changes
+      - name: Commit and Push
         if: steps.git_status.outputs.has_changes == 'true'
         run: |
-          git add full_channels.json
-          git commit -m "Automated: Update full_channels.json (Action runs every 7 mins)"
+          git add fancode.json
+          git commit -m "Jio Hotstar Letest Update Now Live ✅🔥"
           git push
           
