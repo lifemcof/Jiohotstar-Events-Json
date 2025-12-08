@@ -15,7 +15,7 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Download Jio Hotstar JSON
+      - name: Download JioHotstar JSON
         run: |
           curl -sS -o jiotv.json "https://raw.githubusercontent.com/fakeall12398-sketch/JIO_TV/refs/heads/main/full_channels.json"
 
